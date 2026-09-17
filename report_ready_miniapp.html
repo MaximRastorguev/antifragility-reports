@@ -252,7 +252,7 @@
             osc.stop(t + 0.03);
             const tg = window.Telegram && window.Telegram.WebApp;
             if (tg && tg.HapticFeedback) {
-                tg.HapticFeedback.impactOccurred('light');
+                tg.HapticFeedback.impactOccurred('heavy');
             } else if (navigator.vibrate) {
                 navigator.vibrate(10);
             }
