@@ -737,7 +737,7 @@ function showTip(bar) {
     tip.style.left = left + 'px';
     tip.style.top = Math.max(0, br.top - pr.top - 12) + 'px';
     tip.classList.add('show');
-    tipTimer = setTimeout(() => tip.classList.remove('show'), 2600);
+    tipTimer = setTimeout(() => tip.classList.remove('show'), 5200);
 }
 
 barsHost.querySelectorAll('.af-bar').forEach(bar => {
@@ -749,7 +749,7 @@ plotEl.addEventListener('click', () => tip.classList.remove('show'));
 // ---- запуск/остановка анимаций только когда слайд виден ----
 const afSlide = host.closest('.slide');
 function afStart() {
-    if (!sparkTimer) sparkTimer = setInterval(spawnSpark, 110);
+    if (!sparkTimer) sparkTimer = setInterval(spawnSpark, 220);
     if (!rafId) rafId = requestAnimationFrame(stepBall);
 }
 function afStop() {
