@@ -637,7 +637,7 @@ ANTIFRAGILITY_VALUES.forEach((v, i) => {
 
 // ---- угольки в столбце "Обвал" ----
 const embers = barsHost.querySelector('.af-embers');
-const CRACKS = 7, EX_MIN = 6, EX_MAX = 36;
+const CRACKS = 4, EX_MIN = 6, EX_MAX = 36;
 for (let i = 0; i < CRACKS; i++) {
     const crack = document.createElement('div');
     crack.className = 'af-crack';
@@ -749,7 +749,7 @@ plotEl.addEventListener('click', () => tip.classList.remove('show'));
 // ---- запуск/остановка анимаций только когда слайд виден ----
 const afSlide = host.closest('.slide');
 function afStart() {
-    if (!sparkTimer) sparkTimer = setInterval(spawnSpark, 55);
+    if (!sparkTimer) sparkTimer = setInterval(spawnSpark, 110);
     if (!rafId) rafId = requestAnimationFrame(stepBall);
 }
 function afStop() {
